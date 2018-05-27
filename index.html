@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Game Engine</title>
+
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    
+    
+
+
+</head>
+
+<body>
+    <div>
+        <div id="overlay">
+        </div>
+        <div id="controller">
+            <div id="controllerOut">
+                <div class="cable"></div>
+                <div id="controllerInner">
+                    <div class="left">
+                        <div class="arrow">
+                            <div id="trs"></div>
+                            <div class="base"></div>
+                        </div>
+                        <div class="arrow aDown">
+                            <div id="trs"></div>
+                            <div class="base"></div>
+                        </div>
+                        <div class="arrow aLeft">
+                            <div id="trs"></div>
+                            <div class="base"></div>
+                        </div>
+                        <div class="arrow aRight">
+                            <div id="trs"></div>
+                            <div class="base"></div>
+                        </div>
+                        <div class="horz"></div>
+                        <div class="horzShad"></div>
+                        <div class="horzShadWhite"></div>
+                        <div class="moves"></div>
+                        <div class="vert">
+                        </div>
+                        <div class="vertWhite"></div>
+                    </div>
+                    <!--End Left-->
+                    <div class="center">
+                        <div class="bar bTop"></div>
+                        <div class="bar"></div>
+                        <div class="bar bText">
+                            <ul>
+                                <li>SELECT</li>
+                                <li>START</li>
+                            </ul>
+                        </div>
+                        <div class="bar buttonBar">
+                            <div class="buttonBarInner">
+                                <ul>
+                                    <li onclick="start();">
+                                        <!--##-->
+                                    </li>
+                                    <li>
+                                        <!--##-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--end buttonBar-->
+                        <div class="bar bBot"></div>
+                    </div>
+                    <!--End Center-->
+                    <div class="right">
+                        <h3 class="trademark">
+                            R-G-E
+                            <span class="reg">&reg;</span>
+                        </h3>
+                        <ul class="rightButtons">
+                            <li>
+                                <div class="circ" onclick="b();" id="B-btn"></div>
+                                <span class="buttNums">B</span>
+                            </li>
+                            <li>
+                                <div class="circ" onclick="a();" id="A-btn"></div>
+                                <span class="buttNums aButt">A</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End Right-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="clock">
+        <p class="date">{{ date }}</p>
+        <p class="time">{{ time }}</p>
+    </div>
+
+    <script src="js/clock.js"></script>
+    <script>
+        function b() {
+            alert("Zurück");
+        }
+
+        function a() {
+            alert("Weiter");
+        }
+
+        function start() {
+            var x = document.getElementById("overlay");
+            x.style.display = "block";
+
+        }
+    </script>
+</body>
+
+</html>
