@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Game Engine</title>
-
+    <link rel="icon" type="image/png" href="img/favicon.png" />
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js">
     </script>
@@ -17,8 +17,7 @@
 
 <body>
     <div>
-        <div id="overlay">
-        </div>
+
         <div id="controller">
             <div id="controllerOut">
                 <div class="cable"></div>
@@ -131,22 +130,6 @@
         function a() {
             alert("Weiter");
         }
-
-
-
-        function time() {
-            var x = document.getElementById("time-table");
-            var currentdate = new Date();
-            var datetime = "Last Sync: " + currentdate.getDate() + "/" +
-                (currentdate.getMonth() + 1) + "/" +
-                currentdate.getFullYear() + " @ " +
-                currentdate.getHours() + ":" +
-                currentdate.getMinutes() + ":" +
-                currentdate.getSeconds();
-            console.log(datetime);
-            x.innerHTML = datetime;
-        }
-
     </script>
 </body>
 
