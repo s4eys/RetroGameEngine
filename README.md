@@ -7,3 +7,4 @@ JS Framework Vue.js
 + simple CDN integration
 + enthusiastic community
 + simpler than angular.js
++ good Documentation
