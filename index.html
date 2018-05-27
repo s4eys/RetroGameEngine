@@ -8,8 +8,8 @@
 
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
-    
-    
+
+
 
 
 </head>
@@ -95,9 +95,30 @@
         </div>
 
     </div>
-    <div id="clock">
-        <p class="date">{{ date }}</p>
-        <p class="time">{{ time }}</p>
+
+
+
+    <div id="table" class="container">
+        <table>
+            <tr>
+                <td>A</td>
+                <td><img src="img/clock.png" class="clock-image"></td>
+                <td>C</td>
+            </tr>
+
+            <tr>
+                <td>B</td>
+                <td id="time-table">
+                    <div id="clock">
+                        <!--<p class="date">{{ date }}</p>-->
+                        <p class="time">{{ time }}</p>
+                    </div>
+                </td>
+                <td>D</td>
+            </tr>
+
+
+        </table>
     </div>
 
     <script src="js/clock.js"></script>
@@ -110,11 +131,21 @@
             alert("Weiter");
         }
 
-        function start() {
-            var x = document.getElementById("overlay");
-            x.style.display = "block";
 
+
+        function time() {
+            var x = document.getElementById("time-table");
+            var currentdate = new Date();
+            var datetime = "Last Sync: " + currentdate.getDate() + "/" +
+                (currentdate.getMonth() + 1) + "/" +
+                currentdate.getFullYear() + " @ " +
+                currentdate.getHours() + ":" +
+                currentdate.getMinutes() + ":" +
+                currentdate.getSeconds();
+            console.log(datetime);
+            x.innerHTML = datetime;
         }
+
     </script>
 </body>
 
